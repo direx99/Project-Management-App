@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ProjectDash from './ProjectDash';
 
 
 export default function Home() {
@@ -21,6 +22,8 @@ export default function Home() {
 
       <Text></Text>
       </View>
+      <ProjectDash/>
+
       <StatusBar style="auto" />
     </View>
   );
