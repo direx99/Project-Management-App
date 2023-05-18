@@ -46,16 +46,18 @@ const styles = StyleSheet.create({
 
   GreetName:{
     fontSize:24,
-    color:"#000",
-    alignSelf:'flex-start'
+    color:"#10376C",
+    alignSelf:'flex-start',
+    fontWeight:600
 
   },
   GreetDes:{
     fontSize:15,
-    color:"#000",
-    alignSelf:'flex-start'
+    color:"#838686",
+    alignSelf:'flex-start',
+    fontWeight:600
 
-    
+
   }
 
 });
