@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 import ProjectDash from './ProjectDash';
 
 
@@ -20,7 +20,17 @@ export default function Home() {
       <Text style={styles.GreetName}>Hi {name}</Text>
       <Text style={styles.GreetDes}>Good Morning</Text>
 
-      <Text></Text>
+      </View>
+      <TextInput  placeholder='Search' style={styles.SearchInput}></TextInput>
+      <View style={styles.GreetBanner}>
+      <Text>Lets Schedule your projects</Text>
+      <Text>Lets Schedule your projects</Text>
+
+      </View>
+      <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginBottom:10}}>
+        <Text>Ongoing Projects</Text>
+        <Text>Show All</Text>
+
       </View>
       <ProjectDash/>
 
@@ -57,6 +67,24 @@ const styles = StyleSheet.create({
     alignSelf:'flex-start',
     fontWeight:600
 
+
+  },
+  GreetBanner:{
+    borderColor:'#000',
+    borderWidth:2,
+    width:'100%',
+    padding:20,
+    borderRadius:20,
+    marginVertical:20
+
+  },
+  SearchInput:{
+    width:'100%',
+     backgroundColor:'#F7F7F9',
+     padding:10,
+    borderRadius:20,
+    paddingHorizontal:20,
+    marginTop:10,
 
   }
 

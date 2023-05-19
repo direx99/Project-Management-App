@@ -24,14 +24,33 @@ const DashboardBox = ({active}) => {
           <View style={{ flexDirection: "row", paddingTop: 15 }}>
             <Image style={styles.projectBoxImage} source={MobIcon} />
             <View>
-              <Text style={styles.projectBoxTitle}>Mobile App</Text>
-              <Text style={styles.projectBoxSubT}>E Commerce</Text>
+              <Text style={[styles.projectBoxTitle,{color: active ? '#fff' : '#424957' }]}>Mobile App</Text>
+              <Text style={[styles.projectBoxSubT,{color: active ? '#9BB7DD' : '#9FA5B0' }]}>E Commerce</Text>
             </View>
           </View>
         </View>
         <View style={styles.progressstyle}>
           <Text style={styles.progressText}>Progress</Text>
-          <Progress.Bar progress={0.5} color="#fff" style={styles.progessbar} />
+          {
+             active ? (
+              
+                <>
+                <Progress.Bar progress={0.5} 
+                color="#fff" 
+                style={styles.progessbar} />
+                </>
+              
+
+             ):(
+
+              <>
+              <Progress.Bar progress={0.5} 
+              color="#10376C" 
+              style={styles.progessbar} />
+              </>
+             )
+          }
+        
           <Text style={styles.progressPrecent}>50%</Text>
         </View>
       </View>
